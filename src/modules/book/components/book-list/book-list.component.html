@@ -1,0 +1,23 @@
+<div>
+    <table style="width: 100%;">
+        <thead>
+            <tr>
+                <th>TITLE</th>
+                <th>AUTHORS</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let book of books">
+                <td>{{book.volumeInfo.title}}</td>
+                <td>{{book.volumeInfo.authors}}</td>
+                <td>  
+                    <button
+                    (click)="add.emit(book.id)"
+                    data-test="add-button">Add to Collection</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
