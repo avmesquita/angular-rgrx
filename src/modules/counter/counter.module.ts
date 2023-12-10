@@ -12,10 +12,7 @@ import { CounterComponent } from './components/counter/counter.component';
   imports: [
     CommonModule,
     CounterRoutingModule,
-    StoreModule.forFeature(
-      'count', counterReducer
-    )
-
+    StoreModule.forRoot({ count: counterReducer })
   ]
 })
 export class CounterModule { }

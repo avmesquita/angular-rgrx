@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './components/app/app.component';
 
-import { StoreModule } from '@ngrx/store';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -12,8 +12,8 @@ import { StoreModule } from '@ngrx/store';
   ],
   imports: [
     BrowserModule,    
-    AppRoutingModule,
-    StoreModule.forRoot()
+    AppRoutingModule,    
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
